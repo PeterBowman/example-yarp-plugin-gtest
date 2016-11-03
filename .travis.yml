@@ -19,10 +19,12 @@ before_install:
 install:
   #-- Install cmake
   - sudo apt-get install cmake
+  #-- Install ACE
+  - sudo apt-get install libace-dev
   #-- Install yarp
   - git clone -b shared-library-debug https://github.com/PeterBowman/yarp
   - cd yarp && mkdir build && cd build
-  - cmake .. -DSKIP_ACE=ON
+  - cmake .. # -DSKIP_ACE=ON
   - make
   - sudo make install
   - cd ../..
