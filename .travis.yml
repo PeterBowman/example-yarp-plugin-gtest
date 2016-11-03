@@ -20,7 +20,7 @@ install:
   #-- Install cmake
   - sudo apt-get install cmake
   #-- Install yarp
-  - git clone https://github.com/robotology/yarp
+  - git clone -b shared-library-debug https://github.com/PeterBowman/yarp
   - cd yarp && mkdir build && cd build
   - cmake .. -DSKIP_ACE=ON
   - make
